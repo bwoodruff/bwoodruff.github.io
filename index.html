@@ -1,11 +1,32 @@
 <!doctype html>
 <html lang=en>
 <head>
-<meta charset=utf-8>
-<title>Hello World</title>
+  <meta charset=utf-8>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hello World</title>
+  
+  <style>
+    body {
+      font-family: monospace;
+      font-size: 16em;
+    }
+    @media (prefers-color-scheme: dark) {
+      body {
+        background: #333;
+        color: #FFF;
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      body {
+        background: #FFF;
+        color: #333;
+      }
+    }
+  </style>
 </head>
 <body>
-<p>Hello World</p>
-<p><a rel="me" href="https://1password.social/@ben">Mastodon</a></p>
+  <p>Hello World</p>
+  <p>[ <a rel="me" href="https://1password.social/@ben">Mastodon</a></p> ]
 </body>
 </html>

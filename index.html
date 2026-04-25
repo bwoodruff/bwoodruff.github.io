@@ -1,45 +1,90 @@
 <!doctype html>
-<html lang=en>
+<html lang="en">
 <head>
-  <meta charset=utf-8>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hello World</title>
-  
   <style>
-    body {
-      font-family: monospace;
-      font-size: 1em;
-    }
-    a {
-      text-decoration: underline;
-    }
-    .centerText {
-      text-align: center;
-    }
-    
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: #333;
-        color: #FFF;
-      }
-      a {
-        color: #FF8877;
-      }
+    /* Nord — https://www.nordtheme.com */
+    :root {
+      --nord0: #2e3440;
+      --nord4: #d8dee9;
+      --nord6: #eceff4;
+      --frost0: #8fbcbb;
+      --frost1: #88c0d0;
     }
 
-    @media (prefers-color-scheme: light) {
-      body {
-        background: #FFF;
-        color: #333;
-      }
-      a {
-        color: #800020;
-      }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: monospace;
+      font-size: 1em;
+      line-height: 1.5;
+      background: var(--nord0);
+      color: var(--nord4);
+    }
+
+    .arms-panel {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+
+    .arms-img {
+      display: block;
+      max-width: min(371px, 85vw);
+      height: auto;
+    }
+
+    .content {
+      text-align: center;
+      padding: 4.5em 1.5rem 2rem;
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 1.75rem;
+      letter-spacing: 0.02em;
+      color: var(--nord6);
+    }
+
+    a {
+      color: var(--frost1);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(136, 192, 208, 0.45);
+    }
+
+    a:hover {
+      color: var(--frost0);
+      border-bottom-color: var(--frost0);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--frost1);
+      outline-offset: 3px;
     }
   </style>
 </head>
 <body>
-  <h1 class="centerText">Hello World</h1>
-  <p class="centerText">[ <a rel="me" href="https://1password.social/@ben">Mastodon</a> | <a href="https://twitter.com/bwoodruff">Twitter</a> ]</p>
+  <div class="arms-panel">
+    <img
+      class="arms-img"
+      src="images/bwoodruff-arms.png"
+      width="371"
+      height="600"
+      alt="Argent, on a bend cotticed purpure, three keys bendwise, wards to sinister and downwards of the field."
+    >
+  </div>
+  <div class="content">
+    <h1>Hello World</h1>
+    <p>
+      <a rel="me" href="https://github.com/bwoodruff">GitHub</a>
+    </p>
+  </div>
 </body>
 </html>

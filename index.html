@@ -9,7 +9,6 @@
     :root {
       --nord0: #2e3440;
       --nord4: #d8dee9;
-      --nord6: #eceff4;
       --frost0: #8fbcbb;
       --frost1: #88c0d0;
     }
@@ -35,22 +34,36 @@
       padding: 1.5rem;
     }
 
+    .arms-landing {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .arms-figure {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
     .arms-img {
       display: block;
       max-width: min(371px, 85vw);
       height: auto;
     }
 
-    .content {
-      text-align: center;
-      padding: 4.5em 1.5rem 2rem;
+    .arms-blazon {
+      margin: 0;
+      margin-top: 2em;
+      max-width: 38em;
     }
 
-    h1 {
-      font-weight: 600;
-      font-size: 1.75rem;
-      letter-spacing: 0.02em;
-      color: var(--nord6);
+    .arms-link {
+      margin: 0;
+      margin-top: 1.5em;
+      text-align: center;
     }
 
     a {
@@ -72,19 +85,22 @@
 </head>
 <body>
   <div class="arms-panel">
-    <img
-      class="arms-img"
-      src="images/bwoodruff-arms.png"
-      width="371"
-      height="600"
-      alt="Argent, on a bend cotticed purpure, three keys bendwise, wards to sinister and downwards of the field."
-    >
-  </div>
-  <div class="content">
-    <h1>Hello World</h1>
-    <p>
-      <a rel="me" href="https://github.com/bwoodruff">GitHub</a>
-    </p>
+    <div class="arms-landing">
+      <figure class="arms-figure">
+        <img
+          class="arms-img"
+          src="images/bwoodruff-arms.png"
+          width="371"
+          height="600"
+          title="Argent, on a bend cotticed purpure, three keys bendwise, wards to sinister and downwards of the field."
+          alt="Argent, on a bend cotticed purpure, three keys bendwise, wards to sinister and downwards of the field."
+        >
+        <figcaption class="arms-blazon">Argent, on a bend cotticed purpure, three keys bendwise, wards to sinister and downwards of the field.</figcaption>
+      </figure>
+      <p class="arms-link">
+        <a rel="me" href="https://github.com/bwoodruff">GitHub</a>
+      </p>
+    </div>
   </div>
 </body>
 </html>
